@@ -1,0 +1,35 @@
+<div class="camera-container" [class.is-loading]="loading">
+    <div class="image-frame">
+      <img *ngIf="imgUrl" [src]="imgUrl" alt="Captured Image" class="captured-image">
+    </div>
+  
+    <div class="button-container">
+      <button (click)="takePicture()" class="take-picture-button">
+        <span class="camera-icon">📷</span>
+        <span>Tomar Foto</span>
+      </button>
+  
+      <button *ngIf="imgUrl" (click)="resetCamera()" class="reset-button">
+        <span>Nueva Foto</span>
+      </button>
+  
+      <button *ngIf="gallery.length > 0" (click)="clearGallery()" class="clear-gallery-button">
+        <span>🗑️ Limpiar Galería</span>
+      </button>
+    </div>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <strong>Error:</strong> {{ errorMessage }}
+    </div>
+  
+    <!-- Galería de imágenes -->
+    <div class="gallery-container" *ngIf="gallery.length > 0">
+      <h3>Ｇａｌｅｒｉａ:</h3>
+      <div class="gallery">
+        <div *ngFor="let img of gallery" class="gallery-item">
+          <img [src]="img" alt="Foto guardada" class="gallery-image">
+          <button (click)="deletePhoto(img)" class="delete-photo-button">🗑️</button>
+        </div>
+      </div>
+    </div>
+  </div>

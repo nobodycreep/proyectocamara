@@ -1,0 +1,112 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+}
+
+.camera-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.image-frame {
+    border: 2px solid #fff;
+    padding: 10px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.captured-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ddd;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.error-message {
+    color: #727272;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.gallery h3 {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.gallery-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.delete-photo-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4444;
+    color: #000;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
